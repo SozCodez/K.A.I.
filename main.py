@@ -5,7 +5,6 @@ import time
 kai = "K.A.I."
 adult = False
 
-
 print("I'm K.A.I., your personal A.I. assistant! ")
 
 time.sleep(1.5)
@@ -16,19 +15,34 @@ print("Who am I working with today? ")
 
 usrName = input(":")
 
+    
+
 print("Age? ")
 usrAge = input(":")
+
+time.sleep(1)
 
 if int(usrAge) >= 18: 
     adult = True
 
-print()
+if usrName == "Kai":
+    print()
 
-if adult:
-    print("Welcome " + usrName + ". What can I do for you? ")
-    frstCmd = input(":")
+    if adult:
+        print("Welcome " + usrName + ". What can I do for you, creator? ")
+        frstCmd = input(":")
+    if not adult:
+        print()
+        print("I'm sorry, I am restricted from minors. ")
 
-if not adult:
-    print("I'm sorry, I am restricted from minors. ")
+if usrName != "Kai":
+    print()
 
+    if adult:
+        print("Welcome " + usrName + ". What can I help you with? ")
+        frstCmd = input(": ")
+    if not adult:
+        print()
+        print("I'm sorry, I am restricted from minors.")
+        
 
