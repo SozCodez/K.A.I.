@@ -1,6 +1,9 @@
 #main python code file
 
 import time 
+import json
+import os
+
 
 kai = "K.A.I."
 adult = False
@@ -15,7 +18,6 @@ print("Who am I working with today? ")
 
 usrName = input(":")
 
-    
 
 print("Age? ")
 usrAge = input(":")
@@ -44,5 +46,15 @@ if usrName != "Kai":
     if not adult:
         print()
         print("I'm sorry, I am restricted from minors.")
-        
 
+
+if frstCmd == "nothing":
+    print()
+    time.sleep(1)
+    print("Let me know when I can help.")
+
+if frstCmd == "math":
+    print()
+    print("Whats our equation? ")
+    mathQ = int(input(""))
+    
